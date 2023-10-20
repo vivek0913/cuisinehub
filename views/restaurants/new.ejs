@@ -1,0 +1,63 @@
+<% layout('layouts/boilerplate') %>
+    
+   <div class="row">
+    <h1 class="text-center"> New Recipe</h1>
+    <div class="col-md-6 offset-md-3">
+        <!-- <div class="card shadow"> -->
+            <!-- <div class="card-body"> -->
+        <form action="/restaurants" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="restaurant[title]" required>
+            <div class="valid-feedback">
+                Looks Good
+            </div>
+        
+            </div>
+    
+<!--             
+            <div class="mb-3">
+                <label class="form-label" for="location">Location</label>
+                <input class="form-control" type="text" id="location" name="restaurant[location]" >
+                <div class="valid-feedback">
+                    Looks Good
+                </div>
+            </div> -->
+            <div class="form-file">
+                <input type="file" class="form-file-input" id="image" name="image" multiple>
+                <label class="form-file-label" for="image">
+                    <!-- <span class="form-file-text"> Choose images...</span> -->
+                    <!-- <span class="form-file-button">Browse</span> -->
+                </label>
+            </div>
+    
+
+              <input type="file" name="image" id="" multiple>
+            
+            <!-- <div class="mb-3">
+                <label class="form-label" for=image">Image Url</label>
+                <input class="form-control" type="text" id="image" name="restaurant[image]" required>
+                <div class="valid-feedback">Looks Good</div>
+            </div> -->
+
+              
+            
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="restaurant[description]" required></textarea>
+                <div class="valid-feedback">Looks Good</div>
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-success"> Add Recipe</button>
+            </div>
+        </form>
+        <a class="btn btn-primary" href="/restaurants"" role="button">All Recipes</a>
+            <!-- <a href="/restaurants">All Restaurants</a> -->
+    
+    <!-- </div> -->
+    <!-- </div> -->
+    </div>
+   </div>
+   
